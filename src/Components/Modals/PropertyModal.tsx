@@ -46,7 +46,7 @@ const PropertiesModal: React.FC<PropertiesModalProps> = ({
           <p className="mb-2">Rooms: {property.rooms}</p>
           <h2>Locais próximos ao endereço:</h2>
           <NearbyPlaces property={property} mapId={mapId} />
-          <button onClick={closeModal} className="bg-red-400 px-2 rounded-xl hover:brightness-90 transition">Close</button>
+          <button onClick={closeModal} className="bg-red-400 mt-3 px-2 rounded-xl hover:brightness-90 transition">Close</button>
         </div>
       </div>
     </div>
