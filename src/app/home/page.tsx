@@ -14,9 +14,7 @@ import { GiFamilyHouse } from "react-icons/gi";
 import { MAP_ID } from "@/Services/API/googleMapsAPI";
 
 export default function Home() {
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(
-    null
-  );
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleCardClick = (property: Property) => {

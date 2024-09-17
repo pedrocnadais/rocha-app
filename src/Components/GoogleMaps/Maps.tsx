@@ -14,7 +14,7 @@ interface MapsProps {
   mapId: string;  // Add mapId as a required prop
 }
 
-const loadGoogleMapsScript = (): Promise<void> => {
+export const loadGoogleMapsScript = (): Promise<void> => {
   return new Promise((resolve, reject) => {
     if (typeof window.google !== 'undefined' && window.google.maps) {
       resolve(); // If Google Maps is already loaded, resolve immediately
@@ -25,7 +25,7 @@ const loadGoogleMapsScript = (): Promise<void> => {
 
     if (!existingScript) {
       const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API}`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API}&libraries=places`;
       script.id = 'googleMaps';
       script.async = true;
       script.defer = true;
@@ -44,7 +44,7 @@ const loadGoogleMapsScript = (): Promise<void> => {
   });
 };
 
-const Maps: React.FC<MapsProps> = ({ center, zoom, markers = [], mapId }) => { // Include mapId prop
+const Maps: React.FC<MapsProps> = ({ center, zoom, markers = [], mapId }) => {
   const mapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

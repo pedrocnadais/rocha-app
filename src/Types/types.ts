@@ -6,3 +6,11 @@ export interface Property {
  latitude: number;
  longitude: number;
 }
+
+export interface Place {
+ name: string;
+ address: string;
+ type: string;
+ latitude: number;
+ longitude: number;
+}

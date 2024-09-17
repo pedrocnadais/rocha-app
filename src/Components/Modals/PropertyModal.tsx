@@ -3,6 +3,7 @@ import React from "react";
 import { Property } from "@/Types/types";
 import Maps from "@/Components/GoogleMaps/Maps";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import NearbyPlaces from "../PlacesNearby/NearbyPlaces";
 
 interface PropertiesModalProps {
   isOpen: boolean;
@@ -43,6 +44,8 @@ const PropertiesModal: React.FC<PropertiesModalProps> = ({
           {/* <p className="mb-2">Size: {property.size}</p> */}
           <p className="mb-2">{property.location}</p>
           <p className="mb-2">Rooms: {property.rooms}</p>
+          <h2>Locais próximos ao endereço:</h2>
+          <NearbyPlaces property={property} mapId={mapId} />
           <button onClick={closeModal} className="bg-red-400 px-2 rounded-xl hover:brightness-90 transition">Close</button>
         </div>
       </div>
