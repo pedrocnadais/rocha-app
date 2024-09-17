@@ -15,7 +15,7 @@
 
 # production
 /build
-./Services/API/googleMapsAPI.tsx
+/src/Services/API/
 
 # misc
 .DS_Store
