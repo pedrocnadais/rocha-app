@@ -55,10 +55,8 @@ export default function Home() {
       </BodyContainer>
 
       <FooterContainer>
-        <div>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse porro
-          corporis accusantium odit repellendus, ad praesentium at neque magnam!
-          Tempore.
+        <div className="p-2">
+          Todos os direitos reservados. © Rocha Empreendimentos Imobiliários
         </div>
       </FooterContainer>
       {selectedProperty && (
