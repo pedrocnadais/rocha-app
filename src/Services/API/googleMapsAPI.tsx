@@ -1,0 +1,2 @@
+export const GOOGLE_MAPS_API='AIzaSyC1PI_-4ZAFTPHbFFWwc597Wu088ZrKau8'
+export const MAP_ID='c9ec3a528721635b'
