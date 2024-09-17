@@ -38,7 +38,6 @@ const typeTranslations: { [key: string]: string } = {
 
 const NearbyPlaces: React.FC<NearbyPlacesProps> = ({ property, mapId }) => {
   const [places, setPlaces] = useState<Place[]>([]);
-  // const [markers, setMarkers] = useState<{ position: { lat: number; lng: number }; title: string }[]>([]);
   const [categories, setCategories] = useState<{ [key: string]: Place[] }>({});
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
@@ -93,17 +92,18 @@ const NearbyPlaces: React.FC<NearbyPlacesProps> = ({ property, mapId }) => {
    placeTypes.includes(category)
   )
 
+  console.log(places)
   return (
     <div>
       {/* <Maps center={{ lat: property.latitude, lng: property.longitude }} zoom={15} markers={markers} mapId={mapId} /> */}
-      {filteredCategories.map(([category, places]) => (
+      {filteredCategories.map(([category, categoryPlaces]) => (
        <div key={category}>
         <div onClick={() => toggleCategory(category)} className="cursor-pointer font-bold my-2">
-         {typeTranslations[category] || category.replace('_', ' ')} ({places.length})
+         {typeTranslations[category] || category.replace('_', ' ')} ({categoryPlaces.length})
         </div>
         {expandedCategory === category && (
          <ul>
-          {places.map((place, index) => (
+          {categoryPlaces.map((place, index) => (
            <li key={index}>
             <strong>{place.name}:</strong> ({typeTranslations[place.type] || place.type}) - {place.address}
            </li>
