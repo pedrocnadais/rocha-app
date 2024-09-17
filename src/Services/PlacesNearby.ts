@@ -7,13 +7,11 @@ export const placeTypes = [
  "gas_station",
  "restaurant",
  "bar",
- "cafe",
  "gym",
  "convenience_store",
  "doctor",
  "bakery",
  "school",
- "church",
  "dentist",
  "beauty_salon",
 ];
@@ -50,30 +48,6 @@ export const getNearbyPlaces = async (
       });
     });
   };
-
-
-   // return new Promise((resolve, reject) => {
-   //  const service = new google.maps.places.PlacesService(map);
-   //  const request = {
-   //   location: new google.maps.LatLng(latitude, longitude),
-   //   radius: 1000, // 1000 = 1km
-   //  };
-
-   //  service.nearbySearch(request, (results, status) => {
-   //   if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-   //    const places: Place[] = results.map((place) => ({
-   //     name: place.name || "Unknown",
-   //     address: place.vicinity || "Unknown",
-   //     type: place.types ? place.types[0] : "Unknown",
-   //     latitude: place.geometry?.location?.lat() || 0,
-   //     longitude: place.geometry?.location?.lng() || 0,
-   //    }));
-   //    resolve(places);
-   //   } else {
-   //    reject(`Failed to fetch nearby places: ${status}`)
-   //   }
-   //  });
-   // });
 
   for (const type of placeTypes) {
    try {

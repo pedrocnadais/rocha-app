@@ -1,4 +1,6 @@
-export const propertiesData = [
+import { Property } from "@/Types/types";
+
+export const propertiesData: Property[] = [
  {
    title: 'Edf. Humberto Pontes Filho',
    location: 'Jaboatão dos Guararapes-PE',
@@ -60,8 +62,8 @@ export const propertiesData = [
   location: 'Socorro-SP',
   size: '400m2',
   rooms: 4,
-  latitude: -20.394732012277856, 
-  longitude: -46.511659452712145,
+  latitude: -22.60212211742459,
+  longitude: -46.58593693069085,
 },
 {
   title: 'Clínica',
@@ -75,7 +77,7 @@ export const propertiesData = [
   title: 'Condomínio dos Ipês',
   location: 'Socorro-SP',
   size: '3x260m2',
-  rooms: '',
+  rooms: 0,
   latitude: -22.224978380453024, 
   longitude: -46.336766542411624,
 },
@@ -83,7 +85,7 @@ export const propertiesData = [
   title: 'Condomínio Lacqua',
   location: 'Socorro-SP',
   size: '450m2',
-  rooms: '',
+  rooms: 0,
   latitude: -22.575669808313094,
   longitude: -46.53556236555302,
 },
