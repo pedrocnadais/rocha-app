@@ -15,9 +15,6 @@
 
 # production
 /build
-/src/Services/API/*
-!/src/Services/API/
-!/src/Services/API/.gitkeep
 
 # misc
 .DS_Store
