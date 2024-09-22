@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface Property {
  title: string;
  location: string;
@@ -5,6 +7,8 @@ export interface Property {
  rooms: number;
  latitude: number;
  longitude: number;
+ imageUrl?: StaticImageData;
+ airbnbLink?: string; 
 }
 
 export interface Place {

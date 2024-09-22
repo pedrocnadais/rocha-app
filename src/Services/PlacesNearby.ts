@@ -8,11 +8,7 @@ export const placeTypes = [
  "restaurant",
  "bar",
  "gym",
- "convenience_store",
- "doctor",
  "bakery",
- "school",
- "dentist",
  "beauty_salon",
 ];
 
