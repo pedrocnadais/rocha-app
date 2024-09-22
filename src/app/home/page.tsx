@@ -28,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <HeaderContainer>
         <div className="flex flex-row items-center p-5">
           <GiFamilyHouse size={80} />
@@ -41,7 +41,7 @@ export default function Home() {
       <NavHeader />
 
       <BodyContainer>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-[5%]">
+        <div className="flex flex-row gap-20 p-[5%]">
           {propertiesData.map((property, index) => (
             <PropertyCard
               key={index}
@@ -53,10 +53,11 @@ export default function Home() {
       </BodyContainer>
 
       <FooterContainer>
-        <div className="p-2">
+        <div className="text-center p-2">
           Todos os direitos reservados. © Rocha Empreendimentos Imobiliários
         </div>
       </FooterContainer>
+
       {selectedProperty && (
         <PropertiesModal
           isOpen={isModalOpen}
@@ -65,6 +66,7 @@ export default function Home() {
           mapId={MAP_ID}  // Pass the valid Map ID here
         />
       )}
-    </>
+
+    </div>
   );
 }

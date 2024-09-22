@@ -9,10 +9,11 @@ interface PropertyCardProps {
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick }) => {
   return (
-    <div className="m-auto mb-10">
+    <div className="">
       <div className="h-36 w-36 bg-black rounded-lg sm:h-56 sm:w-56 cursor-pointer" onClick={onClick}></div>
       <p className="text-lg text-left w-full mt-2">{property.title}</p>
-      <p className="text-sm sm:text-lg w-full mt-2">{property.location}</p>
+      <p className="text-sm w-full mt-2">{property.location}</p>
+      <p className="text-sm w-full mt-2">Airbnb Link</p>
       <p className="text-sm sm:text-lg mt-2 cursor-pointer text-white bg-[#4c72bd] px-2 rounded-xl" onClick={onClick}>Saiba Mais</p>
     </div>
   );
