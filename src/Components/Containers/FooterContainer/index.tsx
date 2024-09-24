@@ -7,7 +7,7 @@ interface FooterContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 const FooterContainer: React.FC<FooterContainerProps> = ({ children, ...rest }: FooterContainerProps) => {
   return (
     <div
-      className={`w-screen flex bg-gray-800 text-white items-center justify-center py-4 unselectable`}
+      className={`w-screen flex bg-[#2C3E50] text-[#ECF0F1] items-center justify-center py-4 unselectable`}
       {...rest}
     >
       {children}

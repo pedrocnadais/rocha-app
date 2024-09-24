@@ -11,7 +11,7 @@ interface PropertyCardProps {
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick }) => {
   return (
-    <div className="">
+    <div className="bg-[#BDC3C7] p-2 rounded-xl">
       {property.imageUrl ? (
         <div className="relative h-36 w-36 sm:h-56 sm:w-56">
           <Image
@@ -33,28 +33,39 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick }) => {
           <span className="text-sm text-gray-500">No Image Available</span>
         </div>
       )}
-      <p className="text-lg text-left w-full mt-2">{property.title}</p>
-      <p className="text-sm w-full mt-2">{property.location}</p>
-      {property.airbnbLink ? (
-        <p className="bg-[#d66161] text-sm sm:text-lg cursor-pointer px-2 mt-2 rounded-xl hover:brightness-90 transition inline-block">
-        <a
-          href={property.airbnbLink}
-          target="_blank"
-          className="flex items-center"
-          >
-          Check availability
-          <FaAirbnb className="ml-1" />
-        </a>
+      <p className="text-lg text-left w-full mt-2 text-[#2C3E50]">
+        {property.title}
       </p>
-        ) : (
-          <p className="bg-[#d66161] text-sm sm:text-lg px-2 mt-2 rounded-xl cursor-default inline-block">No Links Available</p>
-        )}
+      <p className="text-sm w-full text-[#2C3E50]">{property.location}</p>
       <p
-        className="text-sm sm:text-lg mt-2 cursor-pointer text-white bg-[#4c72bd] px-2 rounded-xl inline-block"
+        className="text-sm sm:text-lg mt-2 cursor-pointer text-[#ECF0F1] bg-[#2980B9] px-2 rounded-xl inline-block hover:bg-[#60a1cd]"
         onClick={onClick}
       >
         Saiba Mais
       </p>
+      {property.airbnbLink ? (
+        <p className="bg-[#d66161] text-sm sm:text-lg cursor-pointer px-2 mt-2 rounded-xl hover:bg-[#e29090] transition inline-block text-[#ECF0F1]">
+          <a
+            href={property.airbnbLink}
+            target="_blank"
+            className="flex items-center"
+          >
+            Ver disponibilidade
+            <FaAirbnb className="ml-1" />
+          </a>
+        </p>
+      ) : (
+        <p
+          className="bg-[#d66161] text-sm sm:text-lg cursor-pointer px-2 mt-2 rounded-xl hover:bg-[#e29090] transition inline-block text-[#ECF0F1]"
+          onClick={() =>
+            alert(
+              "Não encontramos um link para a propriedade desejada. Para mais informações entre em contato conosco."
+            )
+          }
+        >
+          Nenhum link disponível
+        </p>
+      )}
     </div>
   );
 };

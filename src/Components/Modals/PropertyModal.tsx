@@ -22,7 +22,7 @@ const PropertiesModal: React.FC<PropertiesModalProps> = ({
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-80 flex items-center justify-center z-50">
-      <div className="bg-[#ffffffe9] rounded-lg shadow-lg w-full max-w-xl h-auto max-h-[90vh] overflow-y-auto">
+      <div className="bg-[#d4d5d6] rounded-lg shadow-lg w-full max-w-xl h-auto max-h-[90vh] overflow-y-auto">
         <button onClick={closeModal} className="focus:outline-none mt-5 ml-5">
         <MdKeyboardArrowLeft size={30} />
         </button>
@@ -40,11 +40,11 @@ const PropertiesModal: React.FC<PropertiesModalProps> = ({
           mapId={mapId} // Pass the Map ID to Maps component
         />
         <div className="p-4 ml-12 flex flex-col items-start">
-          <p className="text-2xl text-blue-950 mb-2">{property.title} - {property.size}</p>
+          <p className="text-2xl text-[#2C3E50] mb-2">{property.title} - {property.size}</p>
           {/* <p className="mb-2">Size: {property.size}</p> */}
-          <p className="mb-2">{property.location}</p>
-          <p className="mb-2">Rooms: {property.rooms}</p>
-          <h2>Locais próximos ao endereço:</h2>
+          <p className="mb-2 text-[#2C3E50]">{property.location}</p>
+          <p className="mb-2 text-[#2C3E50]">Rooms: {property.rooms}</p>
+          <h2 className="text-[#2C3E50]">Locais próximos ao endereço:</h2>
           <NearbyPlaces property={property} mapId={mapId} />
           <button onClick={closeModal} className="bg-red-400 mt-3 px-2 rounded-xl hover:brightness-90 transition">Close</button>
         </div>

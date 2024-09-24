@@ -92,14 +92,14 @@ const NearbyPlaces: React.FC<NearbyPlacesProps> = ({ property, mapId }) => {
         <div key={category}>
           <div
             onClick={() => toggleCategory(category)}
-            className="cursor-pointer font-bold my-2"
+            className="cursor-pointer font-bold my-2 text-[#2C3E50] hover:text-[#62788d]"
           >
             {typeTranslations[category] || category.replace("_", " ")} (3)
           </div>
           {expandedCategory === category && (
             <ul>
               {categoryPlaces.slice(0, 3).map((place, index) => (
-                <li key={index}>
+                <li key={index} className="text-[#151c23]">
                   <strong>{place.name}:</strong> (
                   {typeTranslations[place.type] || place.type}) -{" "}
                   {place.address}
