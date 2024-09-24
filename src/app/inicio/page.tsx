@@ -4,7 +4,7 @@
 import BodyContainer from "@/Components/Containers/BodyContainer";
 import FooterContainer from "@/Components/Containers/FooterContainer";
 import HeaderContainer from "@/Components/Containers/HeaderContainer";
-import NavHeader from "@/Components/Containers/Navbar";
+import NavHeader from "@/Components/Containers/NavHeader";
 import PropertiesModal from "@/Components/Modals/PropertyModal";
 import PropertyCard from "@/Components/PropertyCard";
 import { propertiesData } from "@/Data/properties";
@@ -52,11 +52,7 @@ export default function Home() {
         </div>
       </BodyContainer>
 
-      <FooterContainer>
-        <div className="text-center p-2">
-          Todos os direitos reservados. © Rocha Empreendimentos Imobiliários
-        </div>
-      </FooterContainer>
+      <FooterContainer />
 
       {selectedProperty && (
         <PropertiesModal

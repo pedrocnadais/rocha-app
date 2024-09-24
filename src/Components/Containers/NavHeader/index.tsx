@@ -5,14 +5,18 @@ import React from "react";
 
 const NavHeader = () => {
   const currentRoute = usePathname();
+  
+  const redirectToHome = () => {
+    window.location.href = '/inicio'
+  };
 
   const redirectToProperties = () => {
     window.location.href = "/propriedades";
   };
 
-  const redirectToHome = () => {
-    window.location.href = '/inicio'
-  };
+  const redirectToContato = () => {
+    window.location.href = '/contato'
+  }
 
   return (
     <nav className="flex flex-row p-3 bg-[#2C3E50] justify-center gap-[10%] text-xl">
@@ -37,13 +41,12 @@ const NavHeader = () => {
         </button>
       </ul>
       <ul>
-        <button className="text-[#ECF0F1]">
-          <a
-            href="https://api.whatsapp.com/send/?phone=5511910788778&text&type=phone_number&app_absent=0"
-            target="_blank"
-          >
+        <button 
+          onClick={redirectToContato}
+          className={`${
+            currentRoute === "/contato" ? "bg-[#e3bf2f] text-[#ECF0F1] px-2 rounded-xl transition" : "text-[#ECF0F1]"
+          }`}>
             Contato
-          </a>
         </button>
       </ul>
     </nav>

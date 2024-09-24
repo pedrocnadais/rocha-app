@@ -3,7 +3,7 @@
 import BodyContainer from "@/Components/Containers/BodyContainer";
 import FooterContainer from "@/Components/Containers/FooterContainer";
 import HeaderContainer from "@/Components/Containers/HeaderContainer";
-import NavHeader from "@/Components/Containers/Navbar";
+import NavHeader from "@/Components/Containers/NavHeader";
 import PropertiesModal from "@/Components/Modals/PropertyModal";
 import PropertyCard from "@/Components/PropertyCard";
 import { propertiesData } from "@/Data/properties";
