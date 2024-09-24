@@ -10,8 +10,8 @@ import PropertyCard from "@/Components/PropertyCard";
 import { propertiesData } from "@/Data/properties";
 import { Property } from "@/Types/types";
 import { useState } from "react";
-import { GiFamilyHouse } from "react-icons/gi";
 import { MAP_ID } from "@/Services/API/googleMapsAPI";
+import GrayDivider from "@/Components/Dividers/divider";
 
 export default function Home() {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
@@ -29,20 +29,20 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <HeaderContainer>
-        <div className="flex flex-row items-center p-5">
-          <GiFamilyHouse size={80} />
-          <div className="ml-10 text-3xl">
-            Rocha Empreendimentos Imobiliários
-          </div>
-        </div>
-      </HeaderContainer>
-
+      <HeaderContainer />
+        
       <NavHeader />
 
       <BodyContainer>
-        <div className="flex flex-row gap-20 p-[5%]">
-          {propertiesData.map((property, index) => (
+        <div className="m-5 text-center text-[#2C3E50]">
+          <h1 className="text-3xl">Quem somos nós?</h1> 
+          <h3 className="my-5">Somos um negócio familiar que busca fornecer os melhores imóveis, sempre com muita qualidade para que você possa se sentir sempre em casa.</h3>
+        </div>
+
+        <GrayDivider />
+
+        <div className="flex flex-row gap-20 p-[5%] overflow-x-auto">
+          {propertiesData.slice(0, 5).map((property, index) => (
             <PropertyCard
               key={index}
               property={property}
