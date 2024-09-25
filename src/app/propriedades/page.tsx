@@ -43,11 +43,7 @@ export default function Propriedades() {
        </div>
      </BodyContainer>
 
-     <FooterContainer>
-       <div className="text-center p-2">
-         Todos os direitos reservados. © Rocha Empreendimentos Imobiliários
-       </div>
-     </FooterContainer>
+     <FooterContainer />
 
      {selectedProperty && (
        <PropertiesModal
