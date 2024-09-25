@@ -7,7 +7,7 @@ interface BodyContainerProps extends React.HTMLAttributes<HTMLDivElement> {
 const BodyContainer: React.FC<BodyContainerProps> = ({ children, ...rest }: BodyContainerProps) => {
   return (
     <div
-      className={`w-screen bg-[#ECF0F1] unselectable`}
+      className={`w-screen h-screen bg-[#ECF0F1] unselectable`}
       {...rest}
     >
       {children}

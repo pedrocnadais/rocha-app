@@ -3,6 +3,9 @@ import CipoApt from "@/Assets/CipoApt.png";
 import InglesaApt from "@/Assets/InglesaApt.png";
 import RecifeApto from "@/Assets/RecifeApto.png";
 import TuimApt from "@/Assets/TuimApt.png";
+import EdfUrussui from "@/Assets/EdfUrussui.jpeg"
+import SitioVeneza from "@/Assets/SitioVeneza.jpeg"
+import FazendaBolivia from "@/Assets/FazendaBolivia.png"
 
 export const propertiesData: Property[] = [
   {
@@ -54,7 +57,7 @@ export const propertiesData: Property[] = [
     rooms: 1,
     latitude: -23.584547883491183,
     longitude: -46.67719335872355,
-    imageUrl: undefined,
+    imageUrl: EdfUrussui,
   },
   {
     title: "Apartamento",
@@ -72,7 +75,7 @@ export const propertiesData: Property[] = [
     rooms: 4,
     latitude: -22.620345408636247,
     longitude: -46.59199811854522,
-    imageUrl: undefined,
+    imageUrl: SitioVeneza,
   },
   {
     title: "Fazenda Bolívia",
@@ -81,7 +84,7 @@ export const propertiesData: Property[] = [
     rooms: 4,
     latitude: -22.60212211742459,
     longitude: -46.58593693069085,
-    imageUrl: undefined,
+    imageUrl: FazendaBolivia,
   },
   {
     title: "Clínicas",

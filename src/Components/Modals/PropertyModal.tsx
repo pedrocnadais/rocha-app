@@ -1,9 +1,10 @@
 // components/PropertiesModal.tsx
-import React from "react";
+import React, { useState } from "react";
 import { Property } from "@/Types/types";
 import Maps from "@/Components/GoogleMaps/Maps";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import NearbyPlaces from "../PlacesNearby/NearbyPlaces";
+import Spinner from "../Spinner";
 
 interface PropertiesModalProps {
   isOpen: boolean;
@@ -18,6 +19,8 @@ const PropertiesModal: React.FC<PropertiesModalProps> = ({
   property,
   mapId,
 }) => {
+  const [isMapLoading, setIsMapLoading] = useState(true);
+
   if (!isOpen) return null;
 
   return (
@@ -27,6 +30,13 @@ const PropertiesModal: React.FC<PropertiesModalProps> = ({
         <MdKeyboardArrowLeft size={30} />
         </button>
 
+        <div className="relative">
+          {/* Overlay Spinner inside the map */}
+          {isMapLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-200 bg-opacity-50 z-10">
+              <Spinner /> {/* Show the spinner while map is loading */}
+            </div>
+          )}
         {/* Use the new Maps component to display the map */}
         <Maps
           center={{ lat: property.latitude, lng: property.longitude }}
@@ -38,7 +48,10 @@ const PropertiesModal: React.FC<PropertiesModalProps> = ({
             },
           ]}
           mapId={mapId} // Pass the Map ID to Maps component
+          onLoad={() => setIsMapLoading(false)}
         />
+        </div>
+        
         <div className="p-4 ml-12 flex flex-col items-start">
           <p className="text-2xl text-[#2C3E50] mb-2">{property.title} - {property.size}</p>
           {/* <p className="mb-2">Size: {property.size}</p> */}

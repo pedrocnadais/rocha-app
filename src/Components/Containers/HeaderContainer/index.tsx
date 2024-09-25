@@ -1,8 +1,11 @@
 import React from "react";
+import { Toaster } from "react-hot-toast";
 import { GiFamilyHouse } from "react-icons/gi";
 
 const HeaderContainer: React.FC = () => {
  return (
+  <>
+  <Toaster position="top-right" />
   <div className={`w-screen flex flex-1 bg-[#2C3E50] flex-col  items-center unselectable`}>
    <div className="flex flex-row items-center p-5">
           <GiFamilyHouse size={80} className="text-[#2980B9]" />
@@ -11,6 +14,7 @@ const HeaderContainer: React.FC = () => {
           </div>
         </div>
   </div>
+  </>
  )
 }
 

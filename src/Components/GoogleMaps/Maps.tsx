@@ -12,6 +12,7 @@ interface MapsProps {
   zoom: number;
   markers?: Marker[];
   mapId: string;  // Add mapId as a required prop
+  onLoad?: () => void;
 }
 
 export const loadGoogleMapsScript = (): Promise<void> => {
@@ -44,7 +45,7 @@ export const loadGoogleMapsScript = (): Promise<void> => {
   });
 };
 
-const Maps: React.FC<MapsProps> = ({ center, zoom, markers = [], mapId }) => {
+const Maps: React.FC<MapsProps> = ({ center, zoom, markers = [], mapId, onLoad }) => {
   const mapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -75,6 +76,10 @@ const Maps: React.FC<MapsProps> = ({ center, zoom, markers = [], mapId }) => {
       });
     }
 
+    if (onLoad) {
+      onLoad();
+    }
+
     initializeMap();
 
     return () => {
@@ -82,7 +87,7 @@ const Maps: React.FC<MapsProps> = ({ center, zoom, markers = [], mapId }) => {
         map = null as never; // Cleanup map instance on component unmount
       }
     };
-  }, [center, zoom, markers, mapId]); // Include mapId in the dependency array
+  }, [center, zoom, markers, mapId, onLoad]); // Include mapId in the dependency array
 
   return (
     <div className="flex items-center justify-center h-full w-full">

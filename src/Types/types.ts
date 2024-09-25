@@ -5,8 +5,8 @@ export interface Property {
  location: string;
  size: string;
  rooms: number;
- latitude?: number;
- longitude?: number;
+ latitude: number;
+ longitude: number;
  imageUrl?: StaticImageData;
  airbnbLink?: string; 
 }
