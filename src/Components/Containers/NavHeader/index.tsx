@@ -24,7 +24,7 @@ const NavHeader = () => {
         <button
           onClick={redirectToHome}
           className={`${
-            currentRoute === "/inicio" ? "bg-[#e3bf2f] text-[#ECF0F1] px-2 rounded-xl transition" : "text-[#ECF0F1]"
+            currentRoute === "/inicio" ? "bg-[#e3bf2f] text-[#ECF0F1] px-2 rounded-xl" : "text-[#ECF0F1]"
           }`}
         >
           Início
@@ -34,7 +34,7 @@ const NavHeader = () => {
         <button
           onClick={redirectToProperties}
           className={`${
-            currentRoute === "/propriedades" ? "bg-[#e3bf2f] text-[#ECF0F1] px-2 rounded-xl transition" : "text-[#ECF0F1]"
+            currentRoute === "/propriedades" ? "bg-[#e3bf2f] text-[#ECF0F1] px-2 rounded-xl" : "text-[#ECF0F1]"
           }`}
         >
           Propriedades
@@ -44,7 +44,7 @@ const NavHeader = () => {
         <button 
           onClick={redirectToContato}
           className={`${
-            currentRoute === "/contato" ? "bg-[#e3bf2f] text-[#ECF0F1] px-2 rounded-xl transition" : "text-[#ECF0F1]"
+            currentRoute === "/contato" ? "bg-[#e3bf2f] text-[#ECF0F1] px-2 rounded-xl" : "text-[#ECF0F1]"
           }`}>
             Contato
         </button>

@@ -44,7 +44,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick }) => {
         Saiba Mais
       </p>
       {property.airbnbLink ? (
-        <p className="bg-[#d66161] text-sm sm:text-lg cursor-pointer px-2 mt-2 rounded-xl hover:bg-[#e29090] transition inline-block text-[#ECF0F1]">
+        <p className="bg-[#d66161] text-sm sm:text-lg cursor-pointer px-2 mt-2 rounded-xl hover:bg-[#e29090] inline-block text-[#ECF0F1]">
           <a
             href={property.airbnbLink}
             target="_blank"
@@ -56,7 +56,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick }) => {
         </p>
       ) : (
         <p
-          className="bg-[#d66161] text-sm sm:text-lg cursor-pointer px-2 mt-2 rounded-xl hover:bg-[#e29090] transition inline-block text-[#ECF0F1]"
+          className="bg-[#d66161] text-sm sm:text-lg cursor-pointer px-2 mt-2 rounded-xl hover:bg-[#e29090] inline-block text-[#ECF0F1]"
           onClick={() =>
             alert(
               "Não encontramos um link para a propriedade desejada. Para mais informações entre em contato conosco."
